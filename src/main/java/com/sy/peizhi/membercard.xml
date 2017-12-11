@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.weixin.Oper.MemberCardOperImp">
+    <select id="selectMemberById" parameterType="int" resultType="MemberCard">
+        <![CDATA[
+		select * from membercard where member_id=#{member_id};
+        ]]>
+    </select>
+    <select id="SelectAllByCode" parameterType="String" resultType="MemberCard">
+     <![CDATA[
+		select * from membercard where member_code like #{member_code};
+        ]]>
+    </select>
+    
+    
+</mapper>
